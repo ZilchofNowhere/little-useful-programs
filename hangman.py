@@ -28,11 +28,13 @@ def lose():
     if y == 10:
         A.done = True
 def word():
+    lw = []
     for c in w:
         if c in usedltrs:
-            print(c)
+            lw.append(c)
         else:
-            print("_")
+            lw.append("_")
+    print(*lw)
 word()
 def ask():
     global r
@@ -69,6 +71,7 @@ while A.done == False:
             add()
             print(f"Used letters are {usedltrs}")
             lose()
+            word()
     elif len(r) == len(w):
         if r == w:
             print("Congrats! You found the hidden word!")
@@ -76,6 +79,7 @@ while A.done == False:
         else:
             print("You are wrong! Try again")
             lose()
+            word()
     else:
         print("Please respect the instructions and play fairly")
     if A.done == True:
@@ -90,11 +94,7 @@ while A.done == False:
     if x == len(w):
         print("Congrats! You found the hidden word!")
         break
-    """
-    winning()
-    if winning():
-        break
-    """
+
 del usedltrs
 print("Thanks for playing!")
 time.sleep(3)
