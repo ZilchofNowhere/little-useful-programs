@@ -115,7 +115,7 @@ int main(){
             isOver = true;
         }
     }
-
+    cout << board << endl;
     cout << "* APPLAUSE *" << endl;
     
     if (winner == p1){
