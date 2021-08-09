@@ -96,14 +96,14 @@ int main(){
             winner = p1;
             isOver = true;
         } else if (
-            boardCompare(0, 4, 8, 'X') ||
-            boardCompare(10, 14, 18, 'X') ||
-            boardCompare(20, 24, 28, 'X') ||
-            boardCompare(0, 10, 20, 'X') ||
-            boardCompare(4, 14, 24, 'X') ||
-            boardCompare(8, 18, 28, 'X') ||
-            boardCompare(0, 14, 28, 'X') ||
-            boardCompare(8, 14, 20, 'X')
+            boardCompare(0, 4, 8, 'O') ||
+            boardCompare(10, 14, 18, 'O') ||
+            boardCompare(20, 24, 28, 'O') ||
+            boardCompare(0, 10, 20, 'O') ||
+            boardCompare(4, 14, 24, 'O') ||
+            boardCompare(8, 18, 28, 'O') ||
+            boardCompare(0, 14, 28, 'O') ||
+            boardCompare(8, 14, 20, 'O')
         ){
             winner = p2;
             isOver = true;
@@ -114,6 +114,7 @@ int main(){
         if (availableMoves.size() == 0){
             isOver = true;
         }
+        system("cls");
     }
     cout << board << endl;
     cout << "* APPLAUSE *" << endl;
