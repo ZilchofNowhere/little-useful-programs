@@ -72,8 +72,14 @@ int main(){
             }
         }
         else if (num / 100 > 0) {
-            for (int i = 0; i < num / 100; i++){
+            if (num > 399) {
                 addNumeral(C, result, num);
+                result += "D";
+                num %= 100;
+            } else {
+                for (int i = 0; i < num / 100; i++){
+                    addNumeral(C, result, num);
+                }
             }
         }
         else if (num / 50 > 0) {
@@ -89,8 +95,14 @@ int main(){
             }
         }
         else if (num / 10 > 0) {
-            for (int i = 0; i < num / 10; i++) {
+            if (num > 39) {
                 addNumeral(X, result, num);
+                result += "L";
+                num %= 10;
+            } else {
+                for (int i = 0; i < num / 10; i++) {
+                    addNumeral(X, result, num);
+                }
             }
         }
         else if (num / 5 > 0) {
@@ -106,8 +118,14 @@ int main(){
             }
         }
         else {
-            for (int i = 0; i < num; i++) {
+            if (num > 3) {
                 addNumeral(I, result, num);
+                result += "V";
+                num = 0;
+            } else {
+                for (int i = 0; i < num; i++) {
+                    addNumeral(I, result, num);
+                }
             }
         }
     }
