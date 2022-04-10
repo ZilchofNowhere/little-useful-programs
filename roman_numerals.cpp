@@ -12,7 +12,6 @@ enum Numeral {
 };
 
 void addNumeral(Numeral numeral, string& result, int& number) {
-    // unwanted behavior
     switch (numeral) {
         case 1000:
             result += "M";
